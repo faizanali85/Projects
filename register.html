@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/be4d48a975.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="bg">
+
+        <!-- -------------Navbar---------------- -->
+
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-transparent text-white">
+                <a class="navbar-brand" href="home.html">
+                    <dt>Data Insight</dt>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="home.html"><i class="fa-solid fa-house-chimney"></i> Home<span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="dashboard.html"><i class="fa-solid fa-gauge"></i> Dashboard</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="register.html"><i class="fa-solid fa-address-card"></i>
+                                Register</a>
+                        </li>
+                        <!-- <li class="nav-item active">
+                            <a class="nav-link" href="#"><i class="fa-regular fa-envelope"></i> Contact Us</a>
+                        </li> -->
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!-- --------- Form------------ -->
+
+        <div class="container" style="color: #fff;">
+            <form action="#" onsubmit="return validateForm()" id="register" method="post" name="myForm" class="form-group">
+                <h1 style="color: #fff; text-align: center; font-weight: bold;">Registeration Form</h1>
+                <div class="row">
+                    <!-- First Name -->
+                    <div class="col-md-6">
+                        <label for="name">First Name</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fa-solid fa-user"></i></div>
+                            </div>
+                            <input class="form-control" type="text" name="fname" id="fname" placeholder="First Name">
+                        </div>
+                    </div>
+                    <!-- Last Name -->
+                    <div class="col-md-6">
+                        <label for="name">Last Name</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fa-solid fa-user"></i></div>
+                            </div>
+                            <input class="form-control" type="text" name="lname" id="lname"
+                                placeholder="Last Name">
+                        </div>
+                    </div>
+                    <!-- Email -->
+                    <div class="col-md-6" style="padding-top: 5px;">
+                        <label for="email">Email</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fa-solid fa-envelope"></i></div>
+                            </div>
+                            <input class="form-control" type="email" name="email" id="uemail" placeholder="Email">
+                        </div>
+                    </div>
+                    <!-- Password -->
+                    <div class="col-md-6" style="padding-top: 5px;">
+                        <label for="password">Password</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fa-solid fa-key"></i></div>
+                            </div>
+                            <input class="form-control" type="password" name="password" id="password"
+                                placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="col-md-6" style="padding-top: 10px;">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text mr-2 pt-0.5"><i
+                                        class="fa-solid fa-person fa-half-dress"></i>
+                                </div>
+                                <label for="gender" style="text-align: center;">Gender</label>
+                            </div>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input"
+                                checked>
+                            <label class="custom-control-label" for="customRadio1">Male</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadio2">Female</label>
+                        </div>
+                    </div>
+                    <!-- Age -->
+                    <div class="col-md-6 datepicker" style="padding-top: 5px;">
+                        <label for="dob">Date Of Birth</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fa-solid fa-calendar-days"></i></div>
+                            </div>
+                            <input class="form-control" type="date" name="dob" id="dob" placeholder="Date Of Birth">
+                        </div>
+                    </div>
+                    <!-- Phone Number -->
+                    <div class="col-md-6" style="padding-top: 5px;">
+                        <label for="contact">Contact Number</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fa-solid fa-phone"></i></div>
+                            </div>
+                            <input class="form-control" type="tel" name="contact" id="phone"
+                                placeholder="XXX-XXX-XXXX">
+                        </div>
+                    </div>
+                    <div class="col-md-6" style="padding-top: 5px;">
+                        <label for="country">Country</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fa-solid fa-globe"></i></div>
+                            </div>
+                            <select id="country" class="form-control" name="country">
+                                <option>Choose Your Country</option>
+                                <option style="font-weight: bold;" value="pakistan">Pakistan</option>
+                                <option style="font-weight: bold;" value="china">China</option>
+                                <option style="font-weight: bold;" value="usa">United Staes Of America</option>
+                                <option style="font-weight: bold;" value="india">India</option>
+                                <option style="font-weight: bold;" value="uk">United Kingdom</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6" style="padding-top: 5px;">
+                        <label for="industry">Industry</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fa-solid fa-industry"></i></div>
+                            </div>
+                            <select id="industry" class="form-control">
+                                <option selected>Choose Industry</option>
+                                <option style="font-weight: bold;">Information Technology</option>
+                                <option style="font-weight: bold;">Artificial Intelligence</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6" style="padding-top: 10px;">
+                        <label for="exampleFormControlFile1">Upload Profile Picture</label>
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    </div>
+
+                    <div class="col-md-12" style="padding-top: 30px; text-align: center;">
+                        <button type="submit" class="btn btn-lg btn-block btn-primary"
+                            style="border-radius: 0px 60px;">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="form.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

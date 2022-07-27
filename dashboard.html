@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://editor.datatables.net/extensions/Editor/css/editor.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css">
+  <script src="https://kit.fontawesome.com/be4d48a975.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+
+
+  <!-- Data Table-------- -->
+
+
+</head>
+
+<body>
+
+  <div class="bg">
+
+    <!-- -------------Navbar---------------- -->
+
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-transparent text-white">
+        <a class="navbar-brand" href="home.html">
+          <dt>Data Insight</dt>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="home.html"><i class="fa-solid fa-house-chimney"></i> Home<span
+                  class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="dashboard.html"><i class="fa-solid fa-gauge"></i> Dashboard</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="register.html"><i class="fa-solid fa-address-card"></i> Register</a>
+            </li>
+            <!-- <li class="nav-item active">
+              <a class="nav-link" href="#"><i class="fa-regular fa-envelope"></i> Contact Us</a>
+            </li> -->
+
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <!-- -------------Project Dashboard---------------- -->
+
+
+
+
+    <section id="db-main">
+
+      <div class="container">
+        <div class="db-1">
+          <div class="icon1">
+            <img src="dbicon1.png" alt="">
+            <span>
+              <h5>Project Dashboard</h5>
+              <p>This is an example dashboard created using build-in elements and components</p>
+            </span>
+          </div>
+        </div>
+      </div>
+
+
+      <section id="smartinsight">
+
+        <div class="si">
+          <h6 style="color: yellow;">Avio / Dashboard</h6>
+          <h4>Smart Insight</h4>
+          <div class="buttons">
+            <button class="btn-sm btn-primary rounded-pill">Create <i class="fa-thin fa-plus"></i></button>
+            <button class="btn-sm btn-primary rounded-pill">Filter <i class="fa-solid fa-filter"></i></button>
+            <button class="btn-sm btn-primary rounded-pill"><i class="fa-solid fa-puzzle-piece"></i></button>
+            <button class="btn-sm btn-primary rounded-pill"><i class="fa-solid fa-table-cells-large"></i></button>
+            <button class="btn-sm btn-warning rounded-pill">Download <i
+                class="fa-solid fa-cloud-arrow-down"></i></button>
+          </div>
+        </div>
+        <div style="height: 110px;">
+          <div class="h-100 d-inline-block" style="width: 200px; background-color: #fff">
+            <i class="fa-solid fa-address-card"></i>
+            <p>Total Visitors:</p>
+            <h6>182,801</h6>
+          </div>
+          <div class="h-100 d-inline-block" style="width: 200px; background-color: #fff">
+            <i class="fa-solid fa-id-card-clip"></i>
+            <p>Happy Clients:</p>
+            <h6>2,000+</h6>
+          </div>
+          <div class="h-100 d-inline-block" style="width: 200px; background-color: #fff">
+            <i class="fa-solid fa-building-columns"></i>
+            <p>Income:</p>
+            <h6>$12,251.00</h6>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- -------------Scatter and Donut---------------- -->
+
+      <section id="s-d">
+
+        <div class="container">
+          <div class="row">
+            <div class="col-8">
+              <p id="title">Unit Price</p>
+              <div id="editbtn">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModal"><i
+                    class="fa-solid fa-pencil"></i></button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                  aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Data Insight</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        Please Click on "Change Title" button below to update the title.
+                      </div>
+                      <div class="modal-footer">
+                        </button>
+                        <button type="button" class="btn btn-primary" onclick="titleFunction()">Change Title</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <canvas id="myChart" style="width:100%;height: 200px;"></canvas>
+              <script>
+                var xValues = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+                new Chart("myChart", {
+                  type: "line",
+                  data: {
+                    labels: xValues,
+                    datasets: [{
+                      // Yangon
+                      data: [74.69, 46.33, 58.22, 86.31, 68.84, 36.26, 46.95, 43.19, 71.38, 68.93],
+                      borderColor: "red",
+                      fill: true,
+                      label: "Yang0n"
+                    }, {
+                      // Naypyitaw
+                      data: [15.28, 85.39, 73.56, 86.04, 98.42, 68.12, 54.92, 56.11, 98.70, 15.37],
+                      borderColor: "green",
+                      fill: false,
+                      label: "Naypyitaw"
+                    }, {
+                      // Mandalay
+                      data: [54.84, 14.48, 25.51, 93.72, 40.30, 87.98, 33.20, 33.52, 88.36, 94.13],
+                      borderColor: "blue",
+                      fill: false,
+                      label: "Mandalay"
+                    }]
+                  },
+                  options: {
+                    legend: { display: true }
+                  }
+                });
+              </script>
+            </div>
+
+            <div class="col-3">
+              <p>Sales by Category</p>
+              <canvas id="myData" style="width:100%;height: 200px;"></canvas>
+              <script>
+                var xValues = ["Yangon", "Naypyitaw", "Mandalay"];
+                var yValues = [42, 26, 32,];
+                var barColors = [
+                  "#b91d47",
+                  "#00aba9",
+                  "#2b5797"
+                ];
+                new Chart("myData", {
+                  type: "doughnut",
+                  data: {
+                    labels: xValues,
+                    datasets: [{
+                      backgroundColor: barColors,
+                      data: yValues
+                    }]
+                  },
+                  options: {
+                    title: {
+                      display: true,
+                      text: "World Wide Wine Production 2018"
+                    }
+                  }
+                });
+              </script>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ----------------- Data Table --------------- -->
+ 
+      <section id="datatable">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h1>Report Overview</h1>
+              <table id="table1" class="display" style="width:100%">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>Customer Type</th>
+                    <th>Gender</th>
+                    <th>Gross Income</th>
+                    <th>Rating</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Tiger Nixon</td>
+                    <td>Yangon</td>
+                    <td>Member</td>
+                    <td>Female</td>
+                    <td>$26.14</td>
+                    <td>9.1</td>
+                  </tr>
+                  <tr>
+                    <td>Garrett Winters</td>
+                    <td>Naypyitaw</td>
+                    <td>Normal</td>
+                    <td>Female</td>
+                    <td>$3.82</td>
+                    <td>9.6</td>
+                  </tr>
+                  <tr>
+                    <td>Ashton Cox</td>
+                    <td>Mandalay</td>
+                    <td>Member</td>
+                    <td>Male</td>
+                    <td>$5.10</td>
+                    <td>6.8</td>
+                  </tr>
+                  <tr>
+                    <td>Adam</td>
+                    <td>Yangon</td>
+                    <td>Normal</td>
+                    <td>Male</td>
+                    <td>$35.10</td>
+                    <td>9.0</td>
+                  </tr>
+                  <tr>
+                    <td>Danielle</td>
+                    <td>Naypyitaw</td>
+                    <td>Member</td>
+                    <td>Female</td>
+                    <td>$2.60</td>
+                    <td>8.9</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+    </section>
+
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+    crossorigin="anonymous"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('#table1').DataTable();
+    });
+  </script>
+
+  <script>
+    function titleFunction() {
+      document.getElementById("title").innerHTML = "Revenue";
+    }
+  </script>
+</body>
+
+</html>
